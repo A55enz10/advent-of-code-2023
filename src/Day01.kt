@@ -19,7 +19,7 @@ fun main() {
 }
 
 private fun String.getDigits(): String {
-    val digitList =  arrayOf("zero","one","two","three","four","five","six","seven","eight","nine")
+    val digitList =  arrayOf("one","two","three","four","five","six","seven","eight","nine")
     var digitStr = ""
     var i = 0
     while (i < this.length) {
@@ -29,7 +29,7 @@ private fun String.getDigits(): String {
         else
             digitList.forEach{
                 if (subStr.startsWith(it)) {
-                    digitStr += digitList.indexOf(it)
+                    digitStr += digitList.indexOf(it) + 1
                 }
             }
         i++
